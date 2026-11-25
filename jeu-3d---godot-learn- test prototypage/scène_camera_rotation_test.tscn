@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bboci205oibi4"]
 
-[ext_resource type="Script" uid="uid://dhcgmm6bxpw84" path="res://script/camera_rotate_testkit.gd" id="1_jlldl"]
+[ext_resource type="Script" uid="uid://65ytynhwh6uc" path="res://rotation_camera_test.gd" id="1_jlldl"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_w34n1"]
 
@@ -11,7 +11,9 @@ mesh = SubResource("CylinderMesh_w34n1")
 
 [node name="Camera3D" type="Camera3D" parent="MeshInstance3D" unique_id=186437378]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 13.525691)
+script = ExtResource("1_jlldl")
+
+[node name="pivot_camera" type="Node3D" parent="MeshInstance3D/Camera3D" unique_id=1649501919]
 
 [node name="code_rotation_camera" type="Node3D" parent="MeshInstance3D/Camera3D" unique_id=196680233]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -13.525691)
-script = ExtResource("1_jlldl")

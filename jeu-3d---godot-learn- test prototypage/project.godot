@@ -10,15 +10,19 @@ config_version=5
 
 [application]
 
-config/name="jeu 3D - godot learn"
+config/name="projet godot - pfe 2026/2027 - ricochet bang"
 run/main_scene="uid://yswuhb7r5la6"
 config/features=PackedStringArray("4.7", "Forward Plus")
-config/icon="res://assets pas important/icon.svg"
+boot_splash/image="uid://c6a05j45d7jd4"
+config/icon="uid://35wyi5nevi2l"
 
 [display]
 
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+mouse_cursor/custom_image="uid://cn5k6rkigac1d"
+mouse_cursor/custom_image_hotspot=Vector2(1, 1)
+mouse_cursor/tooltip_position_offset=Vector2(1, 1)
 
 [input]
 
