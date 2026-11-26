@@ -10,7 +10,7 @@
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_h8xou"]
 
-[node name="player" type="Node3D" unique_id=1089279907]
+[node name="free_cam_mode" type="Node3D" unique_id=1089279907]
 
 [node name="canva_ui_ux" type="CanvasModulate" parent="." unique_id=38767569]
 color = Color(0.9990863, 0.9990863, 0.9990863, 1)

@@ -1,26 +1,20 @@
-[gd_scene format=3 uid="uid://do3eofg5s7nxs"]
+[gd_scene format=3 uid="uid://csmd31a06efyr"]
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_tmpnt"]
-radius = 5.0
-height = 10.0
-radial_segments = 10
+[ext_resource type="PackedScene" uid="uid://ket0b1suslss" path="res://assets/truc_pour_test.fbx" id="1_jbbki"]
+[ext_resource type="Script" uid="uid://sp6dsk8djb6e" path="res://script/cam_gimbal.gd" id="2_2v0kq"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qxa67"]
-cull_mode = 2
-albedo_color = Color(0.9254902, 0.58431375, 0.21568628, 0.73333335)
-
-[sub_resource type="BoxMesh" id="BoxMesh_jbbki"]
-size = Vector3(30, 2, 30)
-
-[node name="Node" type="Node" unique_id=349386497]
+[node name="main_scene_object cam" type="Node" unique_id=349386497]
 
 [node name="map" type="Node3D" parent="." unique_id=1541706515]
 
-[node name="MeshInstance3D(la forme utiliser)2" type="MeshInstance3D" parent="map" unique_id=1502255626]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-mesh = SubResource("CapsuleMesh_tmpnt")
-surface_material_override/0 = SubResource("StandardMaterial3D_qxa67")
+[node name="player" type="CharacterBody3D" parent="." unique_id=1006370033]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
 
-[node name="MeshInstance3D(la forme utiliser)" type="MeshInstance3D" parent="map" unique_id=351695005]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-mesh = SubResource("BoxMesh_jbbki")
+[node name="truc_pour_test" parent="player" unique_id=1417307014 instance=ExtResource("1_jbbki")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.0333085, 0)
+
+[node name="cam_gimbal" type="Node3D" parent="player" unique_id=1566998915]
+script = ExtResource("2_2v0kq")
+
+[node name="Camera3D" type="Camera3D" parent="player/cam_gimbal" unique_id=331670788]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8.629464)

@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://b02863inachq4"]
+
+[ext_resource type="PackedScene" uid="uid://ch5smdgc85arf" path="res://assets/player_camera_testobject.fbx" id="1_gv3yj"]
+
+[node name="player_camera_testobject" unique_id=140516709 instance=ExtResource("1_gv3yj")]
