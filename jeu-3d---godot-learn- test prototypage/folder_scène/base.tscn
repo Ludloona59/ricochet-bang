@@ -1,0 +1,105 @@
+[gd_scene format=3 uid="uid://yswuhb7r5la6"]
+
+[ext_resource type="PackedScene" uid="uid://cjtjmswngyrwg" path="res://LD_prototype/ld_test.tscn" id="1_ohlpa"]
+[ext_resource type="PackedScene" uid="uid://cho82eh50xb08" path="res://assets/Untitled-1.glb" id="2_3vi8l"]
+[ext_resource type="PackedScene" uid="uid://btad70ea4oagh" path="res://point.tscn/player.tscn" id="2_05a4p"]
+[ext_resource type="PackedScene" uid="uid://b76lp2a8ln5l2" path="res://LD_prototype/bloc ld.glb" id="4_evyjo"]
+[ext_resource type="PackedScene" uid="uid://bvtn7ommtdihi" path="res://LD_prototype/foutain.glb" id="5_f0vq3"]
+[ext_resource type="PackedScene" uid="uid://dfffwf4cdk8sq" path="res://LD_prototype/proto_scene_pierre.glb" id="6_46axm"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h8xou"]
+size = Vector3(10, 10, 10)
+
+[sub_resource type="BoxMesh" id="BoxMesh_w34n1"]
+size = Vector3(30, 2, 30)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_mae0v"]
+radius = 5.0
+height = 10.0
+radial_segments = 10
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h8xou"]
+cull_mode = 2
+albedo_color = Color(0.9254902, 0.58431375, 0.21568628, 0.73333335)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_evyjo"]
+height = 4.5
+
+[node name="Main" type="Node" unique_id=689643666]
+
+[node name="sol" type="StaticBody3D" parent="." unique_id=113695612]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.29498, 0)
+axis_lock_linear_x = true
+axis_lock_linear_y = true
+axis_lock_linear_z = true
+
+[node name="CollisionShape3D (collision de la forme)" type="CollisionShape3D" parent="sol" unique_id=451359683]
+shape = SubResource("BoxShape3D_h8xou")
+debug_color = Color(0.79854417, 0.41441473, 0.227471, 0.41960785)
+
+[node name="MeshInstance3D(la forme utiliser)" type="MeshInstance3D" parent="sol/CollisionShape3D (collision de la forme)" unique_id=1147299291]
+mesh = SubResource("BoxMesh_w34n1")
+
+[node name="MeshInstance3D(la forme utiliser)" type="MeshInstance3D" parent="sol/CollisionShape3D (collision de la forme)/MeshInstance3D(la forme utiliser)" unique_id=790798687]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46, 0, 0)
+mesh = SubResource("BoxMesh_w34n1")
+
+[node name="MeshInstance3D(la forme utiliser)2" type="MeshInstance3D" parent="sol/CollisionShape3D (collision de la forme)/MeshInstance3D(la forme utiliser)" unique_id=1909312093]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46, 0, 0)
+mesh = SubResource("CapsuleMesh_mae0v")
+surface_material_override/0 = SubResource("StandardMaterial3D_h8xou")
+
+[node name="DirectionalLight3D(la lumière de la scène, parfois faut la retourner)" type="DirectionalLight3D" parent="." unique_id=1551269361]
+transform = Transform3D(1, 0, 0, 0, -0.0054176026, 0.99998534, 0, -0.99998534, -0.0054176026, 0, 16.12283, 0)
+shadow_enabled = true
+
+[node name="CollisionShape3D (collision de la forme)" type="CollisionShape3D" parent="." unique_id=1466342204]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.29498, 0)
+shape = SubResource("BoxShape3D_h8xou")
+debug_color = Color(0.79854417, 0.41441473, 0.227471, 0.41960785)
+
+[node name="MeshInstance3D(la forme utiliser)" type="MeshInstance3D" parent="CollisionShape3D (collision de la forme)" unique_id=309438357]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25, 0)
+mesh = SubResource("CylinderMesh_evyjo")
+surface_material_override/0 = SubResource("StandardMaterial3D_h8xou")
+
+[node name="Untitled-1" parent="." unique_id=169031385 instance=ExtResource("2_3vi8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5663614, -0.84210205, -6.65)
+visible = false
+
+[node name="player" parent="." unique_id=1089279907 instance=ExtResource("2_05a4p")]
+
+[node name="LD_test" parent="." unique_id=709436856 instance=ExtResource("1_ohlpa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60.373768, -2.29498, 0)
+
+[node name="foutain" parent="." unique_id=115232125 instance=ExtResource("5_f0vq3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.7683716e-07, -1, 0)
+
+[node name="bloc ld3" parent="foutain" unique_id=1749149013 instance=ExtResource("4_evyjo")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 12, 0, 6)
+
+[node name="bloc ld" parent="foutain/bloc ld3" unique_id=706945104 instance=ExtResource("4_evyjo")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 9.000002, 0, 18)
+
+[node name="bloc ld" parent="foutain/bloc ld3/bloc ld" unique_id=2051397149 instance=ExtResource("4_evyjo")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, 1, 0, 4.371139e-08, 5.9999995, 0, -7.9999995)
+
+[node name="bloc ld" parent="foutain/bloc ld3/bloc ld/bloc ld" unique_id=2070316175 instance=ExtResource("4_evyjo")]
+transform = Transform3D(-1, 0, -3.1786506e-08, 0, 1, 0, -3.1786506e-08, 0, 1, 22, 0, -2.999998)
+
+[node name="bloc ld3" parent="foutain/bloc ld3/bloc ld/bloc ld" unique_id=1109370347 instance=ExtResource("4_evyjo")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, -8.742278e-08, 0, 1, 23.999994, 0, 8.999998)
+
+[node name="bloc ld2" parent="foutain/bloc ld3/bloc ld/bloc ld/bloc ld3" unique_id=1647045958 instance=ExtResource("4_evyjo")]
+transform = Transform3D(0, 0, -1, 0, 1, 0, -1, 0, 0, 18, 0, 11.000004)
+
+[node name="DirectionalLight3D(la lumière de la scène, parfois faut la retourner)4" type="DirectionalLight3D" parent="." unique_id=851028307]
+transform = Transform3D(-0.47983772, 0.5447346, 0.6877645, 0.13522172, -0.72862136, 0.6714358, 0.86687416, 0.4151809, 0.27596003, -10.631055, 7.379571, -33.45543)
+shadow_enabled = true
+
+[node name="DirectionalLight3D(la lumière de la scène, parfois faut la retourner)3" type="DirectionalLight3D" parent="." unique_id=52908675]
+transform = Transform3D(0.7211702, 0.69103557, 0.048821315, -0.54917777, 0.52732193, 0.6483328, 0.42227644, -0.49436983, 0.7597902, 0.22668934, 5.188925, -0.66654396)
+shadow_enabled = true
+
+[node name="proto_scene_pierre" parent="." unique_id=1654129301 instance=ExtResource("6_46axm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -41)

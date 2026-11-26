@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://yswuhb7r5la6"]
+
+[ext_resource type="PackedScene" uid="uid://btad70ea4oagh" path="res://point.tscn/player.tscn" id="1_rpg24"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h8xou"]
+size = Vector3(10, 10, 10)
+
+[sub_resource type="BoxMesh" id="BoxMesh_w34n1"]
+size = Vector3(30, 2, 30)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_mae0v"]
+radius = 5.0
+height = 10.0
+radial_segments = 10
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h8xou"]
+cull_mode = 2
+albedo_color = Color(0.48384333, 0.24558541, 0.13059694, 1)
+
+[node name="Main" type="Node" unique_id=689643666]
+
+[node name="sol" type="StaticBody3D" parent="." unique_id=113695612]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.29498, 0)
+axis_lock_linear_x = true
+axis_lock_linear_y = true
+axis_lock_linear_z = true
+
+[node name="CollisionShape3D (collision de la forme)" type="CollisionShape3D" parent="sol" unique_id=451359683]
+shape = SubResource("BoxShape3D_h8xou")
+debug_color = Color(0.79854417, 0.41441473, 0.227471, 0.41960785)
+
+[node name="MeshInstance3D(la forme utiliser)" type="MeshInstance3D" parent="sol/CollisionShape3D (collision de la forme)" unique_id=1147299291]
+mesh = SubResource("BoxMesh_w34n1")
+
+[node name="DirectionalLight3D(la lumière de la scène, parfois faut la retourner)" type="DirectionalLight3D" parent="." unique_id=1551269361]
+transform = Transform3D(1, 0, 0, 0, -0.0054176026, 0.99998534, 0, -0.99998534, -0.0054176026, 0, 16.12283, 0)
+shadow_enabled = true
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=389109500]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.29498, 0)
+
+[node name="CollisionShape3D (collision de la forme)" type="CollisionShape3D" parent="." unique_id=1466342204]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.29498, 0)
+shape = SubResource("BoxShape3D_h8xou")
+debug_color = Color(0.79854417, 0.41441473, 0.227471, 0.41960785)
+
+[node name="MeshInstance3D(la forme utiliser)" type="MeshInstance3D" parent="CollisionShape3D (collision de la forme)" unique_id=309438357]
+mesh = SubResource("CapsuleMesh_mae0v")
+surface_material_override/0 = SubResource("StandardMaterial3D_h8xou")
+
+[node name="SpringArm3D" type="SpringArm3D" parent="." unique_id=1908668248]
+
+[node name="Camera3D" type="Camera3D" parent="SpringArm3D" unique_id=1732043693]
+transform = Transform3D(-0.9999984, 0, 0.0017934712, 0.000112500165, 0.9980307, 0.062727526, -0.0017899391, 0.06272762, -0.9980291, 0, 1.0755081, -20.524567)
+
+[node name="player" parent="." unique_id=1089279907 instance=ExtResource("1_rpg24")]

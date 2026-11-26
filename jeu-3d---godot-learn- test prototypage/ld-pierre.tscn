@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cya7l877s1fov"]
+
+[ext_resource type="PackedScene" uid="uid://dfffwf4cdk8sq" path="res://LD_prototype/proto_scene_pierre.glb" id="1_lkblp"]
+
+[node name="Node3D" type="Node3D" unique_id=765166097]
+
+[node name="proto_scene_pierre" parent="." unique_id=1654129301 instance=ExtResource("1_lkblp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -3)

@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://btad70ea4oagh"]
+
+[ext_resource type="Texture2D" uid="uid://p1ws8y13334c" path="res://assets pas important/Capture d'écran 2026-10-29 132350.png" id="1_jaq5a"]
+[ext_resource type="Texture2D" uid="uid://b2g5qqip1j8gt" path="res://LD_prototype/Fichier 52.png" id="1_tfk2a"]
+[ext_resource type="Script" uid="uid://canwfabt34njd" path="res://script/control.gd" id="2_eeouq"]
+[ext_resource type="FontFile" uid="uid://d3ckd4v7emymk" path="res://matcha_style/Matcha Style.ttf" id="2_ie3af"]
+[ext_resource type="Texture2D" uid="uid://bqedc7gxkmlvn" path="res://LD_prototype/Fichier 50.png" id="7_0v1fi"]
+[ext_resource type="Script" uid="uid://fjum4kxjam7k" path="res://script/camera_player.gd" id="7_kbkvm"]
+[ext_resource type="Script" uid="uid://dvcifnqdxj4hl" path="res://script/player_scrpit.gd" id="8_0v1fi"]
+[ext_resource type="Texture2D" uid="uid://j7as72bdijuk" path="res://LD_prototype/Fichier 49.png" id="8_kbkvm"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_iatyx"]
+font = ExtResource("2_ie3af")
+font_size = 31
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_h8xou"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_h8xou"]
+
+[node name="player" type="Node3D" unique_id=1089279907]
+
+[node name="canva_ui_ux" type="CanvasModulate" parent="." unique_id=38767569]
+color = Color(0.9990863, 0.9990863, 0.9990863, 1)
+
+[node name="Fichier52" type="Sprite2D" parent="canva_ui_ux" unique_id=96403166]
+position = Vector2(961, 107)
+scale = Vector2(0.07637798, 0.07637797)
+texture = ExtResource("1_tfk2a")
+
+[node name="CaptureD\'écran20261029132350" type="Sprite2D" parent="canva_ui_ux" unique_id=1867192872]
+position = Vector2(1038, 97)
+scale = Vector2(0.30963302, 0.30963302)
+texture = ExtResource("1_jaq5a")
+
+[node name="Control" type="Control" parent="." unique_id=1101021281]
+layout_mode = 3
+anchor_left = 0.023000002
+anchor_top = 0.027
+anchor_right = 0.023000002
+anchor_bottom = 0.027
+offset_left = 7.503998
+offset_top = 5.5039997
+offset_right = 47.503998
+offset_bottom = 45.503998
+script = ExtResource("2_eeouq")
+
+[node name="Label2" type="Label" parent="Control" unique_id=739342962]
+layout_mode = 0
+offset_left = 780.0
+offset_top = 1.0
+offset_right = 922.7027
+offset_bottom = 48.0
+text = "traget:"
+label_settings = SubResource("LabelSettings_iatyx")
+
+[node name="Label" type="Label" parent="Control" unique_id=60315057]
+layout_mode = 0
+offset_left = -15.0
+offset_top = 575.0
+offset_right = 283.0
+offset_bottom = 612.0
+text = "test fonts 145 3:!)>"
+label_settings = SubResource("LabelSettings_iatyx")
+
+[node name="camera_player" type="Camera3D" parent="." unique_id=805231503]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8.3330345)
+script = ExtResource("7_kbkvm")
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=1241405565]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+motion_mode = 1
+script = ExtResource("8_0v1fi")
+
+[node name="Pivot" type="Node3D" parent="CharacterBody3D" unique_id=1848712531]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=440920528]
+transform = Transform3D(0.72, 0, 0, 0, 0.72, 0, 0, 0, 0.72, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_h8xou")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D/CollisionShape3D" unique_id=482390208]
+transform = Transform3D(0.885, 0, 0, 0, 0.885, 0, 0, 0, 0.885, 0, 0, 0)
+mesh = SubResource("CapsuleMesh_h8xou")
+
+[node name="Fichier50" type="Sprite2D" parent="." unique_id=1247164796]
+position = Vector2(980.6283, 581.00006)
+scale = Vector2(0.051170867, 0.05117087)
+texture = ExtResource("7_0v1fi")
+
+[node name="Fichier49" type="Sprite2D" parent="." unique_id=619619186]
+position = Vector2(103.00001, 51)
+scale = Vector2(0.036626346, 0.036626346)
+texture = ExtResource("8_kbkvm")

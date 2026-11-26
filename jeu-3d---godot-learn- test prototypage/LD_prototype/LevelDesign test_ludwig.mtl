@@ -1,0 +1,38 @@
+# Created by Kenney (www.kenney.nl)
+
+newmtl custom1(Clone)
+Kd 0.6 0.595 0.595
+
+newmtl primaire_form-Material(Clone)
+Kd 0.552 0.544 0.544
+
+newmtl custom2(Clone)
+Kd 0.738 0.245 0.245
+
+newmtl custom7(Clone)
+Kd 0.828 0.259 0.903
+
+newmtl custom6(Clone)
+Kd 0.924 0.891 0.248
+
+newmtl custom8(Clone)
+Kd 0.945 0.51 0.082
+
+newmtl primaire_form-Material.001(Clone)
+Kd 0.8 0.8 0.8
+
+newmtl custom9(Clone)
+Kd 0.979 0 0
+
+newmtl custom4(Clone)
+Kd 0.111 0.738 0.362
+
+newmtl custom5(Clone)
+Kd 0.177 0.883 0.839
+
+newmtl custom11(Clone)
+Kd 0.572 0.375 0.052
+
+newmtl custom10(Clone)
+Kd 1 0.027 0.873
+
