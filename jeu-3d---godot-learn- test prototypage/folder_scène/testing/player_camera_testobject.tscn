@@ -1,5 +1,32 @@
 [gd_scene format=3 uid="uid://f2byr1nvemsk"]
 
-[ext_resource type="PackedScene" uid="uid://ch5smdgc85arf" path="res://assets/player_camera_testobject.fbx" id="1_gv3yj"]
+[ext_resource type="PackedScene" uid="uid://ket0b1suslss" path="res://assets/truc_pour_test.fbx" id="1_fydok"]
+[ext_resource type="Script" uid="uid://sp6dsk8djb6e" path="res://script/cam_gimbal.gd" id="2_a0xpp"]
 
-[node name="player_camera_testobject" unique_id=140516709 instance=ExtResource("1_gv3yj")]
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_h8xou"]
+height = 7.5966797
+radius = 0.7949219
+
+[node name="main_scene_object cam" type="Node" unique_id=349386497]
+
+[node name="map" type="Node3D" parent="." unique_id=1541706515]
+
+[node name="player" type="CharacterBody3D" parent="." unique_id=1006370033]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0652447, 0)
+
+[node name="Node3D" type="Node3D" parent="player" unique_id=1935039164]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="player/Node3D" unique_id=627505765]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.8375807, 0)
+shape = SubResource("CylinderShape3D_h8xou")
+
+[node name="truc_pour_test(mettre invisible quadn fini)" parent="player" unique_id=1417307014 instance=ExtResource("1_fydok")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.0333085, 0)
+
+[node name="cam_gimbal" type="Node3D" parent="player" unique_id=1566998915]
+script = ExtResource("2_a0xpp")
+
+[node name="Camera3D" type="Camera3D" parent="player/cam_gimbal" unique_id=331670788]
+transform = Transform3D(0.81226176, 0.33194175, -0.47963062, 0, 0.82228065, 0.56908226, 0.5832931, -0.46224377, 0.6679071, -13.4067955, 14.171913, 17.149246)
+keep_aspect = 0
+fov = 90.0
