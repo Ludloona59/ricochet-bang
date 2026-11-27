@@ -1,10 +1,13 @@
 [gd_scene format=3 uid="uid://da4h5jbt5874y"]
 
 [ext_resource type="Texture2D" uid="uid://bwoxyrqk1b1ou" path="res://element uiux/fond menu lancement.png" id="1_g0mgb"]
-[ext_resource type="PackedScene" uid="uid://bta057cxm8nf2" path="res://folder_scène/fonctionne/base prototypage.tscn" id="2_af5aq"]
+[ext_resource type="FontFile" uid="uid://b427lnico5gbg" path="res://Matcha Style.otf" id="2_iqmgm"]
 [ext_resource type="Script" uid="uid://ohj207pueek5" path="res://menu/link_button.gd" id="2_vr3mc"]
+[ext_resource type="PackedScene" uid="uid://sfe5pt7fgst0" path="res://SFX and sound/audioplayer.tscn" id="4_iqmgm"]
 
-[sub_resource type="Theme" id="Theme_iqmgm"]
+[sub_resource type="Theme" id="Theme_vr3mc"]
+default_font = ExtResource("2_iqmgm")
+default_font_size = 100
 
 [node name="menu_node" type="Node" unique_id=981854434]
 
@@ -18,18 +21,20 @@ texture = ExtResource("1_g0mgb")
 
 [node name="LinkButton" type="LinkButton" parent="." unique_id=1105308611]
 anchors_preset = -1
-anchor_left = 0.025
-anchor_top = 0.032
-anchor_right = 0.284
-anchor_bottom = 0.35300002
-offset_left = 51.199997
-offset_top = 42.264
-offset_right = -65.168
-offset_bottom = -40.744003
-theme = SubResource("Theme_iqmgm")
-toggle_mode = true
-button_pressed = true
+anchor_left = 0.711
+anchor_top = 0.062000003
+anchor_right = 0.94100004
+anchor_bottom = 0.29000002
+offset_left = -0.072021484
+offset_top = 22.823997
+offset_right = -0.032104492
+offset_bottom = 0.07998657
+theme = SubResource("Theme_vr3mc")
+theme_override_colors/font_color = Color(1, 0.80675626, 0.95260507, 1)
+theme_override_colors/font_focus_color = Color(0.7796394, 0.99999994, 0.984021, 1)
+theme_override_colors/font_pressed_color = Color(0.9997924, 0.21315718, 0.16010657, 1)
+theme_override_colors/font_hover_color = Color(0.27691555, 0.06862261, 0.4429129, 1)
 text = "START"
 script = ExtResource("2_vr3mc")
 
-[node name="Main" parent="LinkButton" unique_id=689643666 instance=ExtResource("2_af5aq")]
+[node name="audioplayer" parent="." unique_id=1639023333 instance=ExtResource("4_iqmgm")]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bp7rwilhcv5u7"
+path="res://.godot/imported/[No Copyright Music] Ryan Little - Lucys Song [Chill Hop].mp3-90e2dbb743b1463b14702754dc8e55d2.mp3str"
+
+[deps]
+
+source_file="res://SFX and sound/[No Copyright Music] Ryan Little - Lucys Song [Chill Hop].mp3"
+dest_files=["res://.godot/imported/[No Copyright Music] Ryan Little - Lucys Song [Chill Hop].mp3-90e2dbb743b1463b14702754dc8e55d2.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
