@@ -8,7 +8,7 @@
 [node name="map" type="Node3D" parent="." unique_id=1541706515]
 
 [node name="player" type="CharacterBody3D" parent="." unique_id=1006370033]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0652447, 0)
 
 [node name="truc_pour_test" parent="player" unique_id=1417307014 instance=ExtResource("1_jbbki")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.0333085, 0)
@@ -17,4 +17,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.0333085, 0)
 script = ExtResource("2_2v0kq")
 
 [node name="Camera3D" type="Camera3D" parent="player/cam_gimbal" unique_id=331670788]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8.629464)
+transform = Transform3D(0.81226176, 0.33194175, -0.47963062, 0, 0.82228065, 0.56908226, 0.5832931, -0.46224377, 0.6679071, -13.4067955, 14.171913, 17.149246)
+keep_aspect = 0
+fov = 90.0

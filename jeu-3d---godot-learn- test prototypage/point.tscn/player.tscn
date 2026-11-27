@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://btad70ea4oagh"]
 
 [ext_resource type="Texture2D" uid="uid://p1ws8y13334c" path="res://assets pas important/Capture d'écran 2026-10-29 132350.png" id="1_jaq5a"]
-[ext_resource type="Texture2D" uid="uid://b2g5qqip1j8gt" path="res://LD_prototype/Fichier 52.png" id="1_tfk2a"]
-[ext_resource type="Texture2D" uid="uid://bqedc7gxkmlvn" path="res://LD_prototype/Fichier 50.png" id="7_0v1fi"]
+[ext_resource type="Texture2D" uid="uid://b2g5qqip1j8gt" path="res://element uiux/Fichier 52.png" id="1_tfk2a"]
+[ext_resource type="Texture2D" uid="uid://bqedc7gxkmlvn" path="res://element uiux/Fichier 50.png" id="7_0v1fi"]
 [ext_resource type="Script" uid="uid://fjum4kxjam7k" path="res://script/camera_player.gd" id="7_kbkvm"]
-[ext_resource type="Texture2D" uid="uid://j7as72bdijuk" path="res://LD_prototype/Fichier 49.png" id="8_kbkvm"]
+[ext_resource type="Texture2D" uid="uid://j7as72bdijuk" path="res://element uiux/Fichier 49.png" id="8_kbkvm"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_h8xou"]
 

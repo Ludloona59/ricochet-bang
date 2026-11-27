@@ -1,5 +1,5 @@
 extends Node3D
-
+var position_middle = Vector3(0,0,0)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -11,14 +11,21 @@ func _ready() -> void:
 ##ça sa sert à foutre la direction de la cam (gauche droite)
 func _process(delta):
 	if Input.is_action_pressed("cam_rotation_left"):
-		rotation.y -= 1.0 * delta
+		rotation.y -= 2.0 * delta
 	if Input.is_action_pressed("cam_rotation_right"):
-		rotation.y += 1.0 * delta
+		rotation.y += 2.0 * delta
 		
 ##ça sa sert à faire monter et descendre la cam
-	if Input.is_action_pressed("cam_gimball_up"):
-		position.y -= 1.0 * delta
-		rotation.x -= 0.3 * delta
-	if Input.is_action_pressed("cam_gimball_down"):
-		position.y += 1.0 * delta
-		rotation.x += 0.3 * delta
+	#if Input.is_action_pressed("cam_gimball_up"):
+	#	position.y -= 1.0 * delta
+	#	rotation.x -= 0.3 * delta
+	#if Input.is_action_pressed("cam_gimball_down"):
+	#	position.y += 1.0 * delta
+	#	rotation.x += 0.3 * delta
+		
+	if Input.is_action_pressed("camera_up"):
+		position.y += 5.0 * delta
+		position.y += 5.0 * delta
+	if Input.is_action_pressed("camera_down"):
+		position.y -= 5.0 * delta
+		position.y -= 5.0 * delta

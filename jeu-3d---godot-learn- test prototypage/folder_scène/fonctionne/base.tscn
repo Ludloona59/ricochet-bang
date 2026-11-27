@@ -22,9 +22,6 @@ radial_segments = 10
 cull_mode = 2
 albedo_color = Color(0.9254902, 0.58431375, 0.21568628, 0.73333335)
 
-[sub_resource type="CylinderMesh" id="CylinderMesh_evyjo"]
-height = 4.5
-
 [node name="Main" type="Node" unique_id=689643666]
 
 [node name="sol" type="StaticBody3D" parent="." unique_id=113695612]
@@ -44,32 +41,33 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.7683716e-07, 1.29498, 0)
 transform = Transform3D(0.7211702, 0.69103557, 0.048821315, -0.54917777, 0.52732193, 0.6483328, 0.42227644, -0.49436983, 0.7597902, 0.22668886, 6.188925, -0.66654396)
 shadow_enabled = true
 
-[node name="bloc ld3" parent="sol/CollisionShape3D (collision de la forme)/foutain" unique_id=1749149013 instance=ExtResource("4_evyjo")]
+[node name="house5" parent="sol/CollisionShape3D (collision de la forme)/foutain" unique_id=1109370347 instance=ExtResource("4_evyjo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.999996, 0, 2.9999962)
+
+[node name="house3" parent="sol/CollisionShape3D (collision de la forme)/foutain" unique_id=2051397149 instance=ExtResource("4_evyjo")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, -8.742278e-08, 0, 1, 10.999998, 0, -6)
+
+[node name="house4" parent="sol/CollisionShape3D (collision de la forme)/foutain" unique_id=2070316175 instance=ExtResource("4_evyjo")]
+transform = Transform3D(1, 0, -5.563627e-08, 0, 1, 0, 5.563627e-08, 0, 1, -11.000002, 0, -9)
+
+[node name="house6" parent="sol/CollisionShape3D (collision de la forme)/foutain" unique_id=1749149013 instance=ExtResource("4_evyjo")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 12, 0, 6)
 
-[node name="bloc ld" parent="sol/CollisionShape3D (collision de la forme)/foutain/bloc ld3" unique_id=706945104 instance=ExtResource("4_evyjo")]
+[node name="house2" parent="sol/CollisionShape3D (collision de la forme)/foutain/house6" unique_id=706945104 instance=ExtResource("4_evyjo")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 9.000002, 0, 18)
 
-[node name="bloc ld" parent="sol/CollisionShape3D (collision de la forme)/foutain/bloc ld3/bloc ld" unique_id=2051397149 instance=ExtResource("4_evyjo")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, 1, 0, 4.371139e-08, 5.9999995, 0, -7.9999995)
+[node name="house1" parent="sol/CollisionShape3D (collision de la forme)/foutain" unique_id=1647045958 instance=ExtResource("4_evyjo")]
+transform = Transform3D(0, 0, -1, 0, 1, 0, -1, 0, 0, 5.0000043, 0, 14)
 
-[node name="bloc ld" parent="sol/CollisionShape3D (collision de la forme)/foutain/bloc ld3/bloc ld/bloc ld" unique_id=2070316175 instance=ExtResource("4_evyjo")]
-transform = Transform3D(-1, 0, -3.1786506e-08, 0, 1, 0, -3.1786506e-08, 0, 1, 22, 0, -2.999998)
-
-[node name="bloc ld3" parent="sol/CollisionShape3D (collision de la forme)/foutain/bloc ld3/bloc ld/bloc ld" unique_id=1109370347 instance=ExtResource("4_evyjo")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, -8.742278e-08, 0, 1, 23.999994, 0, 8.999998)
-
-[node name="bloc ld2" parent="sol/CollisionShape3D (collision de la forme)/foutain/bloc ld3/bloc ld/bloc ld/bloc ld3" unique_id=1647045958 instance=ExtResource("4_evyjo")]
-transform = Transform3D(0, 0, -1, 0, 1, 0, -1, 0, 0, 18, 0, 11.000004)
-
-[node name="MeshInstance3D(la forme utiliser)" type="MeshInstance3D" parent="sol/CollisionShape3D (collision de la forme)" unique_id=1147299291]
+[node name="MeshInstance3D(la forme utiliser)" type="MeshInstance3D" parent="sol/CollisionShape3D (collision de la forme)/foutain" unique_id=1147299291]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.7683716e-07, -1.29498, 0)
 mesh = SubResource("BoxMesh_w34n1")
 
-[node name="MeshInstance3D(la forme utiliser)" type="MeshInstance3D" parent="sol/CollisionShape3D (collision de la forme)/MeshInstance3D(la forme utiliser)" unique_id=790798687]
+[node name="MeshInstance3D(la forme utiliser)" type="MeshInstance3D" parent="sol" unique_id=790798687]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46, 0, 0)
 mesh = SubResource("BoxMesh_w34n1")
 
-[node name="MeshInstance3D(la forme utiliser)2" type="MeshInstance3D" parent="sol/CollisionShape3D (collision de la forme)/MeshInstance3D(la forme utiliser)" unique_id=1909312093]
+[node name="MeshInstance3D(la forme utiliser)2" type="MeshInstance3D" parent="sol" unique_id=1909312093]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46, 0, 0)
 mesh = SubResource("CapsuleMesh_mae0v")
 surface_material_override/0 = SubResource("StandardMaterial3D_h8xou")
@@ -83,13 +81,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.29498, 0)
 shape = SubResource("BoxShape3D_h8xou")
 debug_color = Color(0.79854417, 0.41441473, 0.227471, 0.41960785)
 
-[node name="MeshInstance3D(la forme utiliser)" type="MeshInstance3D" parent="CollisionShape3D (collision de la forme)" unique_id=309438357]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25, 0)
-mesh = SubResource("CylinderMesh_evyjo")
-surface_material_override/0 = SubResource("StandardMaterial3D_h8xou")
-
 [node name="Untitled-1" parent="." unique_id=169031385 instance=ExtResource("2_3vi8l")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5663614, -0.84210205, -6.65)
+visible = false
 
 [node name="proto_scene_pierre" parent="." unique_id=1654129301 instance=ExtResource("6_46axm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -41)
